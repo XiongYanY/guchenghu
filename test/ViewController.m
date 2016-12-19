@@ -9,13 +9,16 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic)UIView *maskView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor =[UIColor redColor];
+    [self maskView];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,6 +27,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(UIView *)maskView{
+    if (_maskView == nil) {
+        _maskView  = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
+        [self.view addSubview:_maskView];
+        _maskView.backgroundColor = [UIColor purpleColor];
+    }
+    return _maskView;
+}
 
 @end
