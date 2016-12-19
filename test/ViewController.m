@@ -35,5 +35,7 @@
     }
     return _maskView;
 }
-
+-(void)anotherName{
+    NSLog(@"this is another branch");
+}
 @end
