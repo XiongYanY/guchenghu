@@ -37,6 +37,7 @@
 -(void)anotherName{
     NSLog(@"this is another branch");
     NSLog(@"this is another branch");
+    //增加新功能
 
 }
 @end
